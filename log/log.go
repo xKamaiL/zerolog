@@ -7,7 +7,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/rs/zerolog"
+	"github.com/xkamail/zerolog"
 )
 
 // Logger is the global logger.
@@ -122,6 +122,10 @@ func Print(v ...interface{}) {
 // Arguments are handled in the manner of fmt.Printf.
 func Printf(format string, v ...interface{}) {
 	Logger.Debug().CallerSkipFrame(1).Msgf(format, v...)
+}
+
+func Println(v ...interface{}) {
+	Logger.Debug().CallerSkipFrame(1).Msg(fmt.Sprintln(v...))
 }
 
 // Ctx returns the Logger associated with the ctx. If no logger

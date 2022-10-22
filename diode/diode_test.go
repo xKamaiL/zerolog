@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rs/zerolog"
-	"github.com/rs/zerolog/diode"
-	"github.com/rs/zerolog/internal/cbor"
+	"github.com/xkamail/zerolog"
+	"github.com/xkamail/zerolog/diode"
+	"github.com/xkamail/zerolog/internal/cbor"
 )
 
 func TestNewWriter(t *testing.T) {
