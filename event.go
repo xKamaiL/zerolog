@@ -108,6 +108,14 @@ func (e *Event) Msg(msg string) {
 	e.msg(msg)
 }
 
+func (e *Event) Print(v ...interface{}) {
+	e.Msg(fmt.Sprint(v...))
+}
+
+func (e *Event) Println(v ...interface{}) {
+	e.Msg(fmt.Sprintln(v...))
+}
+
 // Send is equivalent to calling Msg("").
 //
 // NOTICE: once this method is called, the *Event should be disposed.
